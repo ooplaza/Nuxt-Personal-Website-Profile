@@ -27,7 +27,6 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@types/jest": "^26.0.15",
     "babel-core": "^7.0.0-bridge.0",
-    "mdb-vue-ui-kit": "^3.1.1",
     "nuxt": "^2.15.4",
     "nuxt-property-decorator": "^2.7.2",
     "regenerator-runtime": "^0.13.7",

@@ -1,7 +1,7 @@
 <template>
-  <!-- App.vue -->
   <v-app>
-    <v-navigation-drawer permanent expand-on-hover app>
+    <!-- Navigation Bar -->
+    <v-navigation-drawer height="100%" permanent absolute expand-on-hover app>
       <!-- Navigation Bar -->
       <!-- Profile Header -->
       <v-list>
@@ -52,12 +52,9 @@
       </v-list-item>
 
     </v-navigation-drawer>
-
-    <!-- <v-app-bar app> -->
-    <!-- -->
-    <!-- </v-app-bar> -->
-
     <!-- Sizes your content based upon application components -->
+
+    <!-- Header Column -->
     <v-main>
 
       <!-- Provides the application the proper gutter -->
@@ -68,46 +65,67 @@
       </v-container>
     </v-main>
 
-    <v-footer dark padless app>
-      <!-- Footer -->
-      <v-card class="flex" flat tile>
-        <v-card-title class="teal">
-          <!-- Icon As Button -->
-          <v-spacer></v-spacer>
+    <!-- Router -->
+    <v-footer class="" app dark padless>
+      <!-- -->
+      <v-card class="text-center" flat tile width="100%">
 
-          <!-- facebook -->
-          <v-btn class="mx-4" dark icon link>
-            <v-icon size="24px">mdi-facebook</v-icon>
+        <!-- Card for Icons -->
+        <v-card-text>
+          <v-btn class="mx-3" icon v-for="icon in icons" :key="icon">
+            <v-icon dense>{{ icon }}</v-icon>
           </v-btn>
+        </v-card-text>
+        <v-divider></v-divider>
 
-          <!-- twitter -->
-          <v-btn class="mx-4" dark icon link>
-            <v-icon size="24px">mdi-twitter</v-icon>
-          </v-btn>
+        <!-- Additional Info -->
+        <!-- <v-row class="mx-4"> -->
+        <!-- Column 1 -->
+        <!-- <v-col>
+            <v-card flat>
+              <v-card-text>plazaorl.2000@gmail.com</v-card-text>
+              <v-spacer></v-spacer>
+            </v-card>
+          </v-col> -->
 
-          <!-- github -->
-          <v-btn class="mx-4" dark icon link>
-            <v-icon size="24px">mdi-github</v-icon>
-          </v-btn>
+        <!-- Column 2 -->
+        <!-- <v-col>
+            <v-card flat>
+              <v-card-text>P4A Sabang Lingig Surigao del sur, PH 8312</v-card-text>
+            </v-card>
+          </v-col> -->
 
-          <!-- linkedin -->
-          <v-btn class="mx-4" dark icon link>
-            <v-icon size="24px">mdi-linkedin</v-icon>
-          </v-btn>
+        <!-- Column 3 -->
+        <!-- <v-col>
+            <v-card flat>
+              <v-card-text>P4A Sabang Lingig Surigao del sur, PH 8312</v-card-text>
+            </v-card>
+          </v-col>
+        </v-row> -->
 
-        </v-card-title>
+        <!-- Card for Text -->
+        <v-card-text>
+          <strong>&copy;2022 | {{ Author }}</strong>
+        </v-card-text>
       </v-card>
-
     </v-footer>
   </v-app>
 </template>
 
 <script lang="ts">
+
 export default {
   name: 'index',
-  data() {
+  data: () => {
     return {
-      x: 20,
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-instagram',
+        'mdi-github',
+        'mdi-linkedin',
+      ],
+      Author: 'ENGR. PLAZA ORLY',
     }
   }
 }
