@@ -1,64 +1,53 @@
 <template>
   <v-app>
-    <!-- Navigation Bar -->
-    <v-navigation-drawer height="100%" permanent absolute expand-on-hover app>
-      <!-- Navigation Bar -->
-      <!-- Profile Header -->
-      <v-list>
-        <v-list-item link class="px-2">
-          <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/11.jpg"></v-img>
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title class="font-weight-bold">PLAZA, ORLY O.</v-list-item-title>
-            <v-list-item-subtitle>orly.plaza@hcdc.edu.ph</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-      <v-divider></v-divider>
-
-      <!-- Lower List-item-icons -->
-      <!-- My Files -->
-      <v-list-item link>
-        <v-list-item-icon>
-          <v-icon>mdi-folder</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>My Files</v-list-item-title>
-      </v-list-item>
-
-      <!-- Flutter  -->
-      <v-list-item link>
-        <v-list-item-icon>
-          <v-icon>mdi-android-studio</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Flutter Codes</v-list-item-title>
-      </v-list-item>
-
-      <!-- Python -->
-      <v-list-item link>
-        <v-list-item-icon>
-          <v-icon>mdi-language-python</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>Python Codes</v-list-item-title>
-      </v-list-item>
-
-      <!-- JavaScript -->
-      <v-list-item link>
-        <v-list-item-icon>
-          <v-icon>mdi-language-javascript</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>JavaScript Codes</v-list-item-title>
-      </v-list-item>
-
-    </v-navigation-drawer>
-    <!-- Sizes your content based upon application components -->
-
-    <!-- Header Column -->
     <v-main>
+      <!-- Header -->
+      <v-card class="text-center mt-5 mb-5" flat tile width="100%">
+        <!-- Card for Icons -->
+        <v-row>
+          <v-card-text link>
+            <v-btn plain>
+              <v-img src="logo/or1.png" max-width="55" max-height="55"></v-img>
+            </v-btn>
+            <v-btn class="mx-6" v-for="nav_text in header_navigation_text" :key="nav_text" plain link>
+              {{ nav_text }}
+            </v-btn>
+          </v-card-text>
+        </v-row>
+      </v-card>
 
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
+        <!-- Greetings -->
+        <v-card class="text-center" flat tile width="100%">
+          <v-card-text>
+            <div class="text-h2 font-weight-black">
+              ORLY PLAZA
+              <div class="text-h6 font-weight-black">
+                IoT Specialist
+              </div>
+            </div>
+          </v-card-text>
+        </v-card>
+
+        <!-- Profile Image -->
+        <v-card class="text-center mx-auto pa-3" flat tile>
+          <v-row justify="center">
+            <v-img class="rounded-circle" max-width="150" max-height="150" src="Images/pixelface.png">
+            </v-img>
+          </v-row>
+        </v-card>
+
+        <!-- Introduction Text -->
+        <v-card class="text-left mx-auto pa-3" max-width="50%" flat tile>
+          <v-row>
+            <v-col>
+              <p class="text-center mt-10 mb-10">
+                {{ Introduction_text }}
+              </p>
+            </v-col>
+          </v-row>
+        </v-card>
 
         <!-- If using vue-router -->
         <router-view></router-view>
@@ -66,8 +55,7 @@
     </v-main>
 
     <!-- Router -->
-    <v-footer class="" app dark padless>
-      <!-- -->
+    <v-footer class="" app padless>
       <v-card class="text-center" flat tile width="100%">
 
         <!-- Card for Icons -->
@@ -76,36 +64,9 @@
             <v-icon dense>{{ icon }}</v-icon>
           </v-btn>
         </v-card-text>
-        <v-divider></v-divider>
-
-        <!-- Additional Info -->
-        <!-- <v-row class="mx-4"> -->
-        <!-- Column 1 -->
-        <!-- <v-col>
-            <v-card flat>
-              <v-card-text>plazaorl.2000@gmail.com</v-card-text>
-              <v-spacer></v-spacer>
-            </v-card>
-          </v-col> -->
-
-        <!-- Column 2 -->
-        <!-- <v-col>
-            <v-card flat>
-              <v-card-text>P4A Sabang Lingig Surigao del sur, PH 8312</v-card-text>
-            </v-card>
-          </v-col> -->
-
-        <!-- Column 3 -->
-        <!-- <v-col>
-            <v-card flat>
-              <v-card-text>P4A Sabang Lingig Surigao del sur, PH 8312</v-card-text>
-            </v-card>
-          </v-col>
-        </v-row> -->
-
         <!-- Card for Text -->
         <v-card-text>
-          <strong>&copy;2022 | {{ Author }}</strong>
+          <p>{{ Author }} | &copy;2022</p>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -125,7 +86,15 @@ export default {
         'mdi-github',
         'mdi-linkedin',
       ],
+
+      header_navigation_text: [
+        'Home',
+        'About',
+        'Contact',
+      ],
+
       Author: 'ENGR. PLAZA ORLY',
+      Introduction_text: "I am a self-motivated Computer Engineer and an aspiring Python developer, and I use C++ for research and development. I'm fascinated by technology innovation. to get an opportunity that allows me to showcase my skills and contribute to the company's growth.",
     }
   }
 }
