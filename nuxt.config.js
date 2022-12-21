@@ -7,6 +7,9 @@ const API_URL = '/'
 export default {
   ssr: false,
   target: 'static',
+  generate: {
+    fallback: true
+  },
   /*
    ** Headers of the page
    */
