@@ -5,9 +5,6 @@
       <!-- Card for Icons -->
       <v-row>
         <v-card-text link>
-          <v-btn plain>
-            <v-img src="logo/or1.png" max-width="55" max-height="55"></v-img>
-          </v-btn>
           <v-btn class="mx-6" v-for="nav_text in header_navigation_text" :key="nav_text" plain link>
             {{ nav_text }}
           </v-btn>
@@ -33,7 +30,7 @@
         <!-- Profile Image -->
         <v-card class="text-center mx-auto pa-3" flat tile>
           <v-row justify="center">
-            <v-img class="rounded-circle" max-width="150" max-height="150" src="Images/pixelface.png">
+            <v-img class="rounded-circle" max-width="150" max-height="150" src="Images/profile.jpg">
             </v-img>
           </v-row>
         </v-card>
@@ -50,10 +47,10 @@
         </v-card>
 
         <!-- Things That I get in touch! -->
-        <v-card class="text-center" flat tile width="100%">
+        <!-- <v-card class="text-center" flat tile width="100%"> -->
 
           <!-- Card for Text -->
-          <v-card-text>
+          <!-- <v-card-text>
             <p>{{ things }}</p>
           </v-card-text>
 
@@ -62,7 +59,7 @@
               <v-icon dense>{{ tech }}</v-icon>
             </v-row>
           </v-card-text>
-        </v-card>
+        </v-card> -->
 
         <!-- If using vue-router -->
         <router-view></router-view>
@@ -71,11 +68,13 @@
     </v-main>
 
     <!-- Router -->
-    <v-footer class="" app dark padless>
+    <v-footer class="" app padless>
       <v-card class="text-center" flat tile width="100%">
-
         <!-- Card for Icons -->
         <v-card-text>
+          <v-row justify="center" class="pa-5">
+            <v-img src="logo/or1.png" max-width="50" max-height="50" light></v-img>
+          </v-row>
           <v-btn class="mx-3" icon v-for="icon in icons" :key="icon">
             <v-icon dense>{{ icon }}</v-icon>
           </v-btn>
