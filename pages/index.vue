@@ -21,7 +21,7 @@
             <div class="text-h2 font-weight-black">
               ORLY PLAZA
               <div class="text-h6 font-weight-black">
-                OpenCV Engineer
+                Computer Engineer
               </div>
             </div>
           </v-card-text>
