@@ -112,7 +112,7 @@ export default {
       ],
 
       Author: 'ENGR. PLAZA ORLY',
-      Introduction_text: "I am a self-motivated Computer Engineer and an aspiring Python developer, and I use C++ for research and development. I'm fascinated by technology innovation. to get an opportunity that allows me to showcase my skills and contribute to the company's growth.",
+      Introduction_text: "I am a self-motivated Computer Engineer and an aspiring Python developer, and I use C++ for research and development. I'm fascinated by technological innovation. to get an opportunity that allows me to showcase my skills and contribute to the company's growth.",
 
       things: "Technology that I get in touch",
       technology: [
